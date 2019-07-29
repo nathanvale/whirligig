@@ -1,0 +1,55 @@
+{
+  "name": "easy-scripts-template",
+  "description": "",
+  "license": "MIT",
+  "author": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "easy-scripts build",
+    "format": "easy-scripts format",
+    "postinstall": "easy-scripts postinstall",
+    "lint": "easy-scripts lint",
+    "test": "easy-scripts test",
+    "validate": "easy-scripts validate"
+  },
+  "typings": "dist/index.d.ts",
+  "dependencies": {
+    "@babel/runtime-corejs3": "^7.5.5",
+    "@types/string": "^0.0.29",
+    "string": "^3.3.3"
+  },
+  "devDependencies": {
+    "easy-scripts": "^2.8.2",
+    "typescript": "^3.5.2"
+  },
+  "engines": {
+    "node": ">=8.12.0"
+  },
+  "engineStrict": true,
+  "babel": {
+    "presets": [
+      "./node_modules/easy-scripts/dist/config/babelrc.js"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/easy-scripts/dist/config/eslintrc.js",
+    "rules": {}
+  },
+  "eslintIgnore": [
+    "dist"
+  ],
+  "husky": {
+    "hooks": {
+      "commit-msg": "easy-scripts commitlint -e $HUSKY_GIT_PARAMS",
+      "pre-commit": "easy-scripts pre-commit",
+      "post-rewrite": "easy-scripts pre-commit"
+    }
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {}
+    },
+    "preset": "./node_modules/easy-scripts/dist/config/jest.config.js"
+  }
+}
