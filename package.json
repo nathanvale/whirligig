@@ -10,17 +10,27 @@
     "format": "easy-scripts format",
     "postinstall": "easy-scripts postinstall",
     "lint": "easy-scripts lint",
+    "start": "playroom start",
     "test": "easy-scripts test",
     "validate": "easy-scripts validate"
   },
   "typings": "dist/index.d.ts",
   "dependencies": {
-    "@babel/runtime-corejs3": "^7.5.5",
-    "@types/string": "^0.0.29",
-    "string": "^3.3.3"
+    "@babel/runtime-corejs3": "^7.5.5"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "styled-components": "^4.3.2"
   },
   "devDependencies": {
+    "@testing-library/react": "^8.0.7",
+    "@types/styled-components": "^4.1.18",
     "easy-scripts": "^2.8.2",
+    "playroom": "0.9.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "styled-components": "^4.3.2",
     "typescript": "^3.5.2"
   },
   "engines": {

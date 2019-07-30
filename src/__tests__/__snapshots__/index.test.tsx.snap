@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a styled button with text 1`] = `
+<button
+  class="button__Button-w004gt-0 fLSaDs"
+>
+  Test Message
+</button>
+`;
