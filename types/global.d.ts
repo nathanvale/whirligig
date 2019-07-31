@@ -7,7 +7,6 @@ declare module '*.ico' {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 declare type TS_FIXME = any
 
-type IActionCreators = ActionCreators<IReducers>
 type ICloseAnimationType = 'update' | 'back' | 'addToCart' | 'removeFromCart'
 
 declare interface ICard {
