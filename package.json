@@ -7,16 +7,19 @@
   "main": "index.js",
   "scripts": {
     "build": "easy-scripts build",
+    "debug": "node --nolazy --inspect-brk=9229 ./node_modules/playroom/bin/cli.js",
     "format": "easy-scripts format",
     "postinstall": "easy-scripts postinstall",
     "lint": "easy-scripts lint",
     "start": "playroom start",
     "test": "easy-scripts test",
+    "tsc": "tsc --noEmit --watch",
     "validate": "easy-scripts validate"
   },
   "typings": "dist/index.d.ts",
   "dependencies": {
-    "@babel/runtime-corejs3": "^7.5.5"
+    "@babel/runtime-corejs3": "^7.5.5",
+    "playroom": "^0.9.4"
   },
   "peerDependencies": {
     "react": "^16.8.6",
@@ -27,7 +30,6 @@
     "@testing-library/react": "^8.0.7",
     "@types/styled-components": "^4.1.18",
     "easy-scripts": "^2.8.2",
-    "playroom": "0.9.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "styled-components": "^4.3.2",
@@ -37,11 +39,6 @@
     "node": ">=8.12.0"
   },
   "engineStrict": true,
-  "babel": {
-    "presets": [
-      "./node_modules/easy-scripts/dist/config/babelrc.js"
-    ]
-  },
   "eslintConfig": {
     "extends": "./node_modules/easy-scripts/dist/config/eslintrc.js",
     "rules": {}
